@@ -72,6 +72,34 @@ int integerInput() {
 }
 
 /*
+ * integerInput determines if the input is actually an integer of value 1-5
+ * This is used in the menu function to enter a choice for selecting a menu.
+ */
+int integerInputSushi() {
+    string str = "";
+    int number = 0;
+    bool cont = true;
+    while (cont) {
+        cout << "Enter a choice ";
+        getline(cin, str); //grabs the line
+        std::stringstream ss(str);
+        if (ss >> number && !(ss >> str) && (number == 1 || number == 2)) { //enter a number
+            if (number == 1) {
+                return 1;
+            } else if (number == 2) {
+                return 2;
+            }
+        }
+        else
+        {
+            cout << "Invalid not a correct value. Try Again. " << endl;
+        }
+    }
+    return 0;
+}
+
+
+/*
  * chooseSize chooses a number between a certain range
  */
 int chooseSize()

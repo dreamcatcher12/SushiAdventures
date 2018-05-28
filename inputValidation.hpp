@@ -20,6 +20,7 @@ using std::string;
 
 bool YesOrNoInput();
 int integerInput();
+int integerInputSushi();
 int chooseSize();
 int chooseSizeTo100();
 string stringInput();

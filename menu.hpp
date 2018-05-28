@@ -11,7 +11,7 @@
 #include <iostream>
 #include <string>
 #include "inputValidation.hpp"
-#include "STL.hpp"
+#include "Game.hpp"
 
 using std::cin;
 using std::cout;
@@ -22,7 +22,7 @@ class Menu{
 public:
     void displayMenu();
     int chooseFromMenu();
-
+    void displayObjective();
 };
 
 #endif

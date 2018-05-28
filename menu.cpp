@@ -12,11 +12,16 @@
  */
 void Menu::displayMenu()
 {
-
-    cout << "This is the menu for Jason's STL Containers " << endl;
+    cout << "                                                                                                                                 \n"
+            "    //   ) )                                 // | |                                                                                \n"
+            "   ((                  ___     / __     ( ) //__| |     ___   /          ___       __    __  ___           __      ___      ___    \n"
+            "     \\\\     //   / / ((   ) ) //   ) ) / / / ___  |   //   ) / ||  / / //___) ) //   ) )  / /   //   / / //  ) ) //___) ) ((   ) ) \n"
+            "       ) ) //   / /   \\ \\    //   / / / / //    | |  //   / /  || / / //       //   / /  / /   //   / / //      //         \\ \\     \n"
+            "((___ / / ((___( ( //   ) ) //   / / / / //     | | ((___/ /   ||/ / ((____   //   / /  / /   ((___( ( //      ((____   //   ) ) " << endl;
+    cout << "Welcome to the Sushi Adventures Game " << endl;
     cout << "Please pick 1, 2, or 3 " << endl;
-    cout << "1. Queue Simulation " << endl;
-    cout << "2. Stack Palindrome " << endl;
+    cout << "1. Start Game " << endl;
+    cout << "2. Instructions and Objectives of Game " << endl;
     cout << "3. Exit the Program " << endl;
 }
 
@@ -37,17 +42,18 @@ int Menu::chooseFromMenu()
         {
             case 1:
             {
-                queue();
+                Game game;
+                game.playGame();
                 break;
             }
             case 2:
             {
-                stack();
+                displayObjective();
                 break;
             }
             case 3:
             {
-                cout << "Exiting Program " << endl;
+                cout << "Thank you for playing Sushi Adventures. Now exiting program " << endl;
                 break;
             }
             default:
@@ -59,4 +65,13 @@ int Menu::chooseFromMenu()
     while (integerVal != 3); //as long as 8 is not chosen
 
     return 0;
+}
+
+void Menu::displayObjective()
+{
+    std::cout << "The objective of the game is simple. Collect the three types of sushi: Tuna, Salmon, and Unagi.  \n"
+              << "Throughout your journey you will encounter puzzles that test your physical & mental strength \n"
+              << "along with your luck. You must successfully win these puzzles or games and receive the sushis \n"
+              << "If you are successful and win the game, then you get to return back to your village with your \n"
+              << "new sushi skills and will be able to start your own sushi restaurant!" << std::endl;
 }
