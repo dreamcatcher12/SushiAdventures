@@ -13,10 +13,10 @@ class Space {
 
 protected:
     Sushi *sushi;
-    Space *right;
     Space *left;
     Space *top;
     Space *bottom;
+    Space *right;
     int roomNum;
     sushiType sushiType1;
 public:
