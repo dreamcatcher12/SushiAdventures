@@ -21,23 +21,28 @@ void UnagiRoom::goInside(std::vector<Sushi *> *storage) {
                       " a game with me. If you win you get the sushi \n"
               << "Narrator: You will play a game of multiplication. \n";
     std::cout << "This is a game of Mental Strength and will test your mind" << std::endl;
-    int sushiWizardSelect = rand()%10 + 1;
-    std::cout << "What is " << sushiWizardSelect << " times " << sushiWizardSelect << std::endl;
-    int selectCombo = chooseSize();
-    while (selectCombo != sushiWizardSelect*sushiWizardSelect) //randomize the Sushi Master's choice
+    std::cout << "Do you want to proceed with the Game? (Y/N) If not then proceed to the golden plate! " << std::endl;
+    if (YesOrNoInput())
     {
-        std::cout << "Try Again! The Sushi Wizard had a different answer than yours!" << std::endl;
-        std::cout << "Sushi wizard answer " << sushiWizardSelect*sushiWizardSelect << std::endl;
-        std::cout << "You chose: " << selectCombo << std::endl;
-        selectCombo = chooseSize();
-        sushiWizardSelect = rand()%10 + 1;
+        int sushiWizardSelect = rand()%10 + 1;
+        std::cout << "What is " << sushiWizardSelect << " times " << sushiWizardSelect << std::endl;
+        int selectCombo = chooseSize();
+        while (selectCombo != sushiWizardSelect*sushiWizardSelect) //randomize the Sushi Master's choice
+        {
+            std::cout << "Try Again! The Sushi Wizard had a different answer than yours!" << std::endl;
+            std::cout << "Sushi wizard answer " << sushiWizardSelect*sushiWizardSelect << std::endl;
+            std::cout << "You chose: " << selectCombo << std::endl;
+            selectCombo = chooseSize();
+            sushiWizardSelect = rand()%10 + 1;
+        }
+        std::cout << "You beat the Sushi Wizard at his own game! You are truly strong mentally. " << std::endl;
+        findSushi(storage);
+        std::cout << "        ,,,,,,,,     \n"
+                "       ,@@@@@@@@@@,       \n"
+                "      |            |     \n"
+                "       '.________.'    " << std::endl;
     }
-    std::cout << "You beat the Sushi Wizard at his own game! You are truly strong mentally. " << std::endl;
-    findSushi(storage);
-    std::cout << "        ,,,,,,,,     \n"
-            "       ,@@@@@@@@@@,       \n"
-            "      |            |     \n"
-            "       '.________.'    " << std::endl;
+
     std::cout << "Now you see a golden plate where you should put your sushi onto. " << std::endl;
     if (!storage->empty()) {
         std::cout << "Put sushi onto plate from storage?\n"
@@ -48,7 +53,6 @@ void UnagiRoom::goInside(std::vector<Sushi *> *storage) {
         if (putSushi == 1) {
             bool sameSushi = true;
             sushiType sushiCheck = storage->at(0)->sushiType1;
-
             for (int i = 0; i < storage->size(); i++) {
                 if (storage->at(i)->sushiType1 != sushiCheck) {
                     sameSushi = false;
@@ -86,7 +90,7 @@ void UnagiRoom::goInside(std::vector<Sushi *> *storage) {
             }
                 //error for wrong combination of sushi
             else {
-                std::cout << "When you put down the sushi you realize you did not put them in the right order \n"
+                std::cout << "When you put down the sushi you realize you do not have enough sushi \n"
                           << "You need the same sushi for the combination " << std::endl;
             }
         } else if (putSushi == 2) {

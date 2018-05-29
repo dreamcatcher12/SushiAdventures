@@ -70,6 +70,9 @@ int Menu::chooseFromMenu()
 void Menu::displayObjective()
 {
     std::cout << "The objective of the game is simple. Collect the three types of sushi: Tuna, Salmon, and Unagi.  \n"
+              << "You must collect all Tuna first then get to the end and put all Tuna down on the plate. \n"
+              << "Then you can get all the Salmon and put it on the plate. \n"
+              << "Then you must get the final sushi the Unagi sushi and put it on the plate. \n"
               << "Throughout your journey you will encounter puzzles that test your physical & mental strength \n"
               << "along with your luck. You must successfully win these puzzles or games and receive the sushis \n"
               << "If you are successful and win the game, then you get to return back to your village with your \n"
