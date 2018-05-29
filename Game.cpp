@@ -38,8 +38,8 @@ void Game::playGame() {
               << "known as the sushi hero and will be able to go back to your land and start \n"
               << "your very own Sushi restaurant at your village.\n";
 
-    //loop until steps == 13 or when game is won
-    while (totalSteps <= 13)
+    //loop until steps == 18 or when game is won
+    while (totalSteps <= 18)
     {
         sushido->goInside(storage);
 
@@ -74,11 +74,19 @@ void Game::playGame() {
     }
     if (*wonGame)
     {
+        std::cout << ":::   ::: :::::::: :::    ::::::       ::: :::::::: ::::    ::: \n"
+                ":+:   :+::+:    :+::+:    :+::+:       :+::+:    :+::+:+:   :+: \n"
+                " +:+ +:+ +:+    +:++:+    +:++:+       +:++:+    +:+:+:+:+  +:+ \n"
+                "  +#++:  +#+    +:++#+    +:++#+  +:+  +#++#+    +:++#+ +:+ +#+ \n"
+                "   +#+   +#+    +#++#+    +#++#+ +#+#+ +#++#+    +#++#+  +#+#+# \n"
+                "   #+#   #+#    #+##+#    #+# #+#+# #+#+# #+#    #+##+#   #+#+# \n"
+                "   ###    ########  ########   ###   ###   ######## ###    #### " << std::endl;
         std::cout << "You are undoubtedly the hero of us all and you have brought back Sushi Master,\n"
                   << " Sushi Fighter, and Sushi Wizard back to your village. They will help you start your \n"
                   << "new sushi business. Your family and villagers are glad to have you back! " << std::endl;
     } else{
-        std::cout << "You have failed on your adventure and have returned to your village. You have lost!"
+        std::cout << "Too many steps taken. You have failed on your adventure and have returned to your village. \n"
+                  << "You have lost!"
                   << std::endl;
     }
 }
