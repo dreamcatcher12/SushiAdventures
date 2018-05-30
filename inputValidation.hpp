@@ -1,7 +1,7 @@
 /*********************************************************************
 ** Program Filename: inputValidation.hpp
 ** Author: Jason Lim
-** Date: June 3rd, 2018
+** Date: June 12th, 2018
 ** Description: This is the header file for user input validation
 *********************************************************************/
 

@@ -1,14 +1,26 @@
-//
-// Created by limja on 5/28/2018.
-//
+/*********************************************************************
+** Program Filename: SalmonRoom.cpp
+** Author: Jason Lim
+** Date: June 12th, 2018
+** Description: This is the implementation file for Salmon Room
+*********************************************************************/
+
 
 #include "SalmonRoom.hpp"
 
+/*
+ * SalmonRoom constructor takes roomNum based on what is given and
+ * creates a sushiType for Salmon and a new sushi
+ */
 SalmonRoom::SalmonRoom(int roomNum) : Space(roomNum) {
     sushiType1 = Salmon;// salmon sushi
     sushi = new Sushi(sushiType1, roomNum);
 }
 
+/*
+ * goInside takes a parameter for storage for the main char and allows the user to
+ * play the mini game for Salmon Room as well as gather the sushi up and put it in storage
+ */
 void SalmonRoom::goInside(std::vector<Sushi *> *storage) {
     std::cout << "Room Number: " << roomNum << std::endl;
 

@@ -1,9 +1,17 @@
-//
-// Created by limja on 5/28/2018.
-//
+/*********************************************************************
+** Program Filename: UnagiRoom.cpp
+** Author: Jason Lim
+** Date: June 12th, 2018
+** Description: This is the implementation file for UnagiRoom
+*********************************************************************/
+
 
 #include "UnagiRoom.hpp"
 
+/*
+ * UnagiRoom constructor takes roomNum based on what is given and
+ * creates a sushiType for Unagi and a new sushi
+ */
 UnagiRoom::UnagiRoom(int roomNum, bool *wonGame): Space(roomNum){
     sushiType1 = Unagi;// unagi sushi
     sushi = new Sushi(sushiType1, roomNum);
@@ -13,6 +21,12 @@ UnagiRoom::UnagiRoom(int roomNum, bool *wonGame): Space(roomNum){
     this->wonGame = wonGame;
 }
 
+/*
+ * goInside takes a parameter for storage for the main char and allows the user to
+ * play the mini game for Unagi Room as well as gather the sushi up and put it in storage.
+ * It also allows user to put all the sushi in order onto the plates one sushi type at a time
+ * to win the game.
+ */
 void UnagiRoom::goInside(std::vector<Sushi *> *storage) {
     std::cout << "Room Number: " << roomNum << std::endl;
 

@@ -1,9 +1,18 @@
-//
-// Created by limja on 5/28/2018.
-//
+/*********************************************************************
+** Program Filename: menu.cpp
+** Author: Jason Lim
+** Date: June 12th, 2018
+** Description: This is the implementation file for Game
+*********************************************************************/
+
 
 #include "Game.hpp"
 
+/*
+ * Game Constructor which sets total steps to initial amount, creates a bool
+ * for if win game and creates all the rooms, connects the rooms in linked list fashion,
+ * and sets sushido the main char onto the first room. Also creates storage for sushis
+ */
 Game::Game() {
     totalSteps = 0;
     wonGame = new bool(false);
@@ -29,6 +38,11 @@ Game::Game() {
     storage = new std::vector<Sushi*>; // sets up storage box
 }
 
+/*
+ * playGame plays Sushi Adventures and allows movement of left and right in a linear fashion.
+ * Also makes sure the user does not go off the path to follow. Allows user to win or lose based
+ * on the game choices.
+ */
 void Game::playGame() {
     std::cout << "Sushi is a rare and scarce commodity to the land. In fact it has been so sacred that \n"
     << "the local government has banned sushi forever from all villages to keep to themselves. \n "
@@ -91,6 +105,9 @@ void Game::playGame() {
     }
 }
 
+/*
+ * Destructor for game and gets rid of dynamically allocated memory
+ */
 Game::~Game() {
 
     delete wonGame;

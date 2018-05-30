@@ -1,9 +1,17 @@
-//
-// Created by limja on 5/28/2018.
-//
+/*********************************************************************
+** Program Filename: Space.cpp
+** Author: Jason Lim
+** Date: June 12th, 2018
+** Description: This is the implementation file for Space
+*********************************************************************/
+
 
 #include "Space.hpp"
 
+/*
+ * Space constructor takes a room and sets the pointers that are not used
+ * to nullptr and sets the room num to this room num
+ */
 Space::Space(int roomNum) {
 
     top = nullptr;
@@ -11,19 +19,33 @@ Space::Space(int roomNum) {
     this->roomNum = roomNum;
 }
 
+/*
+ * setPtr sets the ptrs of left and right so that each space ptr will point
+ * to rooms in a linear fashion
+ */
 void Space::setPtr(Space *Leftptr, Space *Rightptr) {
     left = Leftptr;
     right = Rightptr;
 }
 
+/*
+ * getLeft returns left pointer
+ */
 Space *Space::getLeft() {
     return left;
 }
 
+/*
+ * getRight returns the right pointer
+ */
 Space *Space::getRight() {
     return right;
 }
 
+/*
+ * findSushi allows user to take the sushi and store it into the bag which is the parameter or storage.
+ * If storage is too full it will tell you or if the sushi was already taken.
+ */
 void Space::findSushi(std::vector<Sushi *> *storage) {
     if (sushi != nullptr)
     {
@@ -55,6 +77,9 @@ void Space::findSushi(std::vector<Sushi *> *storage) {
     }
 }
 
+/*
+ * Space destructor which deletes the sushis
+ */
 Space::~Space() {
 
     if (sushi != nullptr)

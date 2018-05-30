@@ -1,6 +1,9 @@
-//
-// Created by limja on 5/28/2018.
-//
+/*********************************************************************
+** Program Filename: SalmonRoom.hpp
+** Author: Jason Lim
+** Date: June 12th, 2018
+** Description: This is the header file for Salmon Room
+*********************************************************************/
 
 #ifndef SALMONROOM_HPP
 #define SALMONROOM_HPP

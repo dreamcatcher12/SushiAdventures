@@ -1,14 +1,26 @@
-//
-// Created by limja on 5/28/2018.
-//
+/*********************************************************************
+** Program Filename: TunaRoom.cpp
+** Author: Jason Lim
+** Date: June 12th, 2018
+** Description: This is the implementation file for TunaRoom
+*********************************************************************/
+
 
 #include "TunaRoom.hpp"
 
+/*
+ * TunaRoom constructor takes roomNum based on what is given and
+ * creates a sushiType for Tuna and a new sushi
+ */
 TunaRoom::TunaRoom(int roomNum) : Space(roomNum) {
     sushiType1 = Tuna;// tuna sushi
     sushi = new Sushi(sushiType1, roomNum);
 }
 
+/*
+ * goInside takes a parameter for storage for the main char and allows the user to
+ * play the mini game for Tuna Room as well as gather the sushi up and put it in storage
+ */
 void TunaRoom::goInside(std::vector<Sushi *> *storage) {
     std::cout << "Room Number: " << roomNum << std::endl;
 

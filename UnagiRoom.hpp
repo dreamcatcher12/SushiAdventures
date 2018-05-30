@@ -1,6 +1,10 @@
-//
-// Created by limja on 5/28/2018.
-//
+/*********************************************************************
+** Program Filename: UnagiRoom.hpp
+** Author: Jason Lim
+** Date: June 12th, 2018
+** Description: This is the header file for Unagi Room
+*********************************************************************/
+
 
 #ifndef FINALPROJ_UNAGIROOM_HPP
 #define FINALPROJ_UNAGIROOM_HPP

@@ -1,6 +1,10 @@
-//
-// Created by limja on 5/28/2018.
-//
+/*********************************************************************
+** Program Filename: Sushi.hpp
+** Author: Jason Lim
+** Date: June 12th, 2018
+** Description: This is the header file for Sushi
+*********************************************************************/
+
 
 #ifndef TUNAROOM_HPP
 #define TUNAROOM_HPP
