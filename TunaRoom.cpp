@@ -27,8 +27,9 @@ void TunaRoom::goInside(std::vector<Sushi *> *storage) {
     std::cout << "Sushi Master has appeared! \n "
               << "Sushi Master: If you want the Tuna Sushi, then you must play"
                       " a game with me. If you win, you get the sushi. \n"
-              << "Narrator: You will play a game of rock, paper, scissors. However, you \n"
-              << "must match the rock paper or scissors combination of the Sushi Master. " << std::endl;
+              << "Narrator: You will play a matching game of rock, paper, scissors. You \n"
+              << "must match the rock paper or scissors combination of the Sushi Master.\n"
+                      << "For example if both you and Sushi Master choose rock, you win. " << std::endl;
     std::cout << "This is a game of Luck and will test your Luck ability" << std::endl;
     std::cout << "Choose Rock, Paper, or Scissors (1. Rock, 2. Paper, 3. Scissors) " << std::endl;
     std::cout << "Would you like to proceed? Y/N" << std::endl;

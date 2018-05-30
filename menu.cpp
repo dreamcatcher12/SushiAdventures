@@ -20,8 +20,8 @@ void Menu::displayMenu()
             "((___ / / ((___( ( //   ) ) //   / / / / //     | | ((___/ /   ||/ / ((____   //   / /  / /   ((___( ( //      ((____   //   ) ) " << endl;
     cout << "Welcome to the Sushi Adventures Game " << endl;
     cout << "Please pick 1, 2, or 3 " << endl;
-    cout << "1. Start Game " << endl;
-    cout << "2. Instructions and Objectives of Game " << endl;
+    cout << "1. Read Instructions and Objectives of Game First " << endl;
+    cout << "2. Start Game " << endl;
     cout << "3. Exit the Program " << endl;
 }
 
@@ -42,13 +42,13 @@ int Menu::chooseFromMenu()
         {
             case 1:
             {
-                Game game;
-                game.playGame();
+                displayObjective();
                 break;
             }
             case 2:
             {
-                displayObjective();
+                Game game;
+                game.playGame();
                 break;
             }
             case 3:

@@ -46,7 +46,7 @@ int integerInput() {
     int number = 0;
     bool cont = true;
     while (cont) {
-        cout << "Enter a choice ";
+        cout << "Enter a choice 1, 2, or 3 ";
         getline(cin, str); //grabs the line
         std::stringstream ss(str);
         if (ss >> number && !(ss >> str) && (number == 1 || number == 2 || number == 3 )) { //enter a number
