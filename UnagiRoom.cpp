@@ -104,8 +104,8 @@ void UnagiRoom::goInside(std::vector<Sushi *> *storage) {
             }
                 //error for wrong combination of sushi
             else {
-                std::cout << "When you put down the sushi you realize you do not have enough sushi \n"
-                          << "You need the same sushi for the combination " << std::endl;
+                std::cout << "When you put down the sushi you realize you do not have all same sushi. \n"
+                          << "You need the same sushi for the combination (Place all of one type of sushi first) " << std::endl;
             }
         } else if (putSushi == 2) {
             std::cout << "You do not put in any sushi onto the plate. " << std::endl;
