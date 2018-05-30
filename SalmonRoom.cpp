@@ -20,7 +20,7 @@ void SalmonRoom::goInside(std::vector<Sushi *> *storage) {
               << "Narrator: You will have to jump to the cliff. However, you \n"
               << "may or may not be able to jump to the cliff. If you fall into the cracks \n"
               << "Sushi Fighter will save you. " << std::endl;
-    std::cout << "This is a game of Phyiscal Strength and will test your physical ability" << std::endl;
+    std::cout << "This is a game of Physical Strength and will test your physical ability" << std::endl;
     std::cout << "Ready to Jump? (Y/N) " << std::endl;
     int randomizeJump = rand()%2 + 1;
     if (YesOrNoInput())
@@ -28,8 +28,8 @@ void SalmonRoom::goInside(std::vector<Sushi *> *storage) {
         while (randomizeJump != 1) //randomize the Sushi Master's choice
         {
             std::cout << "You nearly died and fell into the crevices but the Sushi Fighter saved you!" << std::endl;
-            std::cout << "Try again? " << std::endl;
-            YesOrNoInput();
+            std::cout << "Try again! " << std::endl;
+            oneToContinue();
             randomizeJump = rand()%2 + 1;
         }
         std::cout << "You made it onto the cliff and now you can retrieve the Salmon Sushi. " << std::endl;

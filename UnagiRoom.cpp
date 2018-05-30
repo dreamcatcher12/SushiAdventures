@@ -53,7 +53,7 @@ void UnagiRoom::goInside(std::vector<Sushi *> *storage) {
         if (putSushi == 1) {
             bool sameSushi = true;
             sushiType sushiCheck = storage->at(0)->sushiType1;
-            for (int i = 0; i < storage->size(); i++) {
+            for (unsigned int i = 0; i < storage->size(); i++) {
                 if (storage->at(i)->sushiType1 != sushiCheck) {
                     sameSushi = false;
                 }
@@ -62,7 +62,7 @@ void UnagiRoom::goInside(std::vector<Sushi *> *storage) {
                 if (sushiCheck == Tuna && storage->size() == 3) {
                     std::cout << "You put the Tuna sushi onto the plate. " << std::endl;
 
-                    for (int i = 0; i < storage->size(); i++) {
+                    for (unsigned int i = 0; i < storage->size(); i++) {
                         delete storage->at(i);
                     }
                     storage->clear();
@@ -70,14 +70,14 @@ void UnagiRoom::goInside(std::vector<Sushi *> *storage) {
                 } else if (sushiCheck == Salmon && storage->size() == 2) {
                     std::cout << "You put the Salmon sushi onto the plate. " << std::endl;
 
-                    for (int i = 0; i < storage->size(); i++) {
+                    for (unsigned int i = 0; i < storage->size(); i++) {
                         delete storage->at(i);
                     }
                     storage->clear();
                     salmonReceived = true;
                 } else if (sushiCheck == Unagi && storage->size() == 1) {
                     std::cout << "You put the Unagi sushi onto the plate. " << std::endl;
-                    for (int i = 0; i < storage->size(); i++) {
+                    for (unsigned int i = 0; i < storage->size(); i++) {
                         delete storage->at(i);
                     }
                     storage->clear();

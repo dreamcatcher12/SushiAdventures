@@ -155,3 +155,27 @@ string stringInput()
     getline(cin, str);
     return str;
 }
+
+/*
+ * oneToContinue makes sure that the user enters 1 to continue the Zoo Tycoon game used for paying food cost
+ * and special events.
+ */
+int oneToContinue() {
+    string str = "";
+    int number = 0;
+    bool cont = true;
+    while (cont) {
+        cout << "Enter a choice ";
+        getline(cin, str); //grabs the line
+        std::stringstream ss(str);
+        if (ss >> number && !(ss >> str) && (number == 1)) { //enter a number 1
+            if (number == 1)
+                return 1;
+        }
+        else
+        {
+            cout << "Invalid not a correct value. Try Again. " << endl;
+        }
+    }
+    return 0;
+}

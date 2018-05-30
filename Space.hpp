@@ -26,7 +26,7 @@ public:
     Space *getLeft();
     Space *getRight();
     void findSushi(std::vector<Sushi*> *storage);
-    ~Space();
+    virtual ~Space();
 
 
 };

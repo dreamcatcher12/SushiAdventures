@@ -24,5 +24,6 @@ int integerInputSushi();
 int chooseSize();
 int chooseSizeTo100();
 string stringInput();
+int oneToContinue();
 
 #endif

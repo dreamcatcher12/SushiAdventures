@@ -12,6 +12,7 @@
 #include "UnagiRoom.hpp"
 #include <iostream>
 #include <cstdlib>
+#include <algorithm>
 #include <vector>
 
 class Game {
