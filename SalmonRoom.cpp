@@ -22,8 +22,17 @@ SalmonRoom::SalmonRoom(int roomNum) : Space(roomNum) {
  * play the mini game for Salmon Room as well as gather the sushi up and put it in storage
  */
 void SalmonRoom::goInside(std::vector<Sushi *> *storage) {
-    std::cout << "Room Number: " << roomNum << std::endl;
-
+    std::cout << "Salmon Room Number: " << roomNum << std::endl;
+    if (roomNum == 2)
+    {
+        std::cout << "Adjacent Room to the Left is Tuna Room Number: " << roomNum - 1 << std::endl;
+        std::cout << "Adjacent Room to Right is Tuna Room Number: " << roomNum + 1 << std::endl;
+    }
+    else if (roomNum == 4)
+    {
+        std::cout << "Adjacent Room to the Left is Tuna Room Number: " << roomNum - 1 << std::endl;
+        std::cout << "Adjacent Room to Right is Tuna Room Number: " << roomNum + 1 << std::endl;
+    }
     std::cout << "You entered a grass plains room that extends far beyond your imagination \n "
               << "It appears that the Salmon sushi is on a cliff that you must jump to! \n "
               <<"Sushi Fighter has appeared! \n "

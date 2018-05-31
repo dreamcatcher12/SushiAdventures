@@ -22,9 +22,23 @@ TunaRoom::TunaRoom(int roomNum) : Space(roomNum) {
  * play the mini game for Tuna Room as well as gather the sushi up and put it in storage
  */
 void TunaRoom::goInside(std::vector<Sushi *> *storage) {
-    std::cout << "Room Number: " << roomNum << std::endl;
-
-    std::cout << "Sushi Master has appeared! \n "
+    std::cout << "Tuna Room Number: " << roomNum << std::endl;
+    if (roomNum == 1)
+    {
+        std::cout << "No room to the Left " << std::endl;
+        std::cout << "Adjacent Room to Right is Salmon Room Number: " << roomNum + 1 << std::endl;
+    }
+    else if (roomNum == 3)
+    {
+        std::cout << "Adjacent Room to the Left is Salmon Room Number: " << roomNum - 1 << std::endl;
+        std::cout << "Adjacent Room to Right is Salmon Room Number: " << roomNum + 1 << std::endl;
+    }
+    else if (roomNum == 5)
+    {
+        std::cout << "Adjacent Room to the Left is Salmon Room Number: " << roomNum - 1 << std::endl;
+        std::cout << "Adjacent Room to Right is Unagi Room Number: " << roomNum + 1 << std::endl;
+    }
+        std::cout << "Sushi Master has appeared! \n "
               << "Sushi Master: If you want the Tuna Sushi, then you must play"
                       " a game with me. If you win, you get the sushi. \n"
               << "Narrator: You will play a matching game of rock, paper, scissors. You \n"

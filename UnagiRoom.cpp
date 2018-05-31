@@ -28,8 +28,12 @@ UnagiRoom::UnagiRoom(int roomNum, bool *wonGame): Space(roomNum){
  * to win the game.
  */
 void UnagiRoom::goInside(std::vector<Sushi *> *storage) {
-    std::cout << "Room Number: " << roomNum << std::endl;
-
+    std::cout << "Unagi Room Number: " << roomNum << std::endl;
+    if (roomNum == 6)
+    {
+        std::cout << "Adjacent Room to the Left is Tuna Room Number: " << roomNum - 1 << std::endl;
+        std::cout << "No room to the Right " << std::endl;
+    }
     std::cout << "Sushi Wizard has appeared! \n "
               << "Sushi Wizard: If you want the Unagi Sushi, then you must play"
                       " a game with me. If you win you get the sushi \n"
